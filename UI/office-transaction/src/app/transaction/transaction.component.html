@@ -1,0 +1,15 @@
+<form  #trans="ngForm">
+    <div class="form-group">
+        <select  name="type" (change)="onChange($event)"ngModel required>
+            <option value="Credit">Credit</option>
+            <option value="debit">debit</option>
+        </select>
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="text" name="amount" placeholder="Amount" ngModel required>
+    </div>
+    <div class="form-group">
+    <input  class="form-control" type="description" name="description" placeholder="description" ngModel required> 
+    </div>
+    <input class="form-control" type="button" class="btn btn-primary"  (click)="onFormClick(trans)"  value ="Add">
+</form>
